@@ -1,0 +1,27 @@
+{
+  "name": "sua-csv-sanitizer",
+  "version": "1.0.0",
+  "description": "Small sanitizer for payroll reports exported to csv format from SUA (Sistema Único de Autodeterminación) a monolith system for social security management used in México",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "sua-sanitize": "bin/sanitize.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eduardorobledo/sua-csv-sanitizer.git"
+  },
+  "keywords": [
+    "sua",
+    "imss",
+    "csv",
+    "sanitizer"
+  ],
+  "author": "Eduardo Robledo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eduardorobledo/sua-csv-sanitizer/issues"
+  },
+  "homepage": "https://github.com/eduardorobledo/sua-csv-sanitizer#readme"
+}
