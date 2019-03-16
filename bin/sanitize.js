@@ -25,7 +25,7 @@ fs.stat(target, function(err, stats) {
 
 
 function sanitize (line) {
-  return line.replace(/\"/g,"").replace(/,,,,,/g,",").slice(1,-10);
+  return line.replace(/\"/g,"").replace(/,,,,,/g,",");
 }
 
 function processFile(file) {
@@ -34,10 +34,11 @@ function processFile(file) {
   rl.on('line', function (line) {
     const sanitized = sanitize(line);
 
-    if (RECORDLINE_RX.test(sanitized)) 
-      return recordBuffer.addRecord(sanitized);
+    const idx = sanitized.search(RECORDLINE_RX);
+    if (idx >= 0) return recordBuffer.addRecord(sanitized.slice(idx));
     
-    if (MOVEMENTLINE_RX.test(sanitized)) recordBuffer.addMove(sanitized);
+    if (MOVEMENTLINE_RX.test(sanitized)) 
+      recordBuffer.addMove(sanitized.slice(1));
     
   });
 }

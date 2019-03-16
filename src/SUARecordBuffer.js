@@ -30,8 +30,8 @@ class SUARecordBuffer {
 
   addMove(line) {
     const nss = this.getLastRecord().slice(0,15);
-    const movementFields = line.split(",").slice(1, 13)
-    this.movements.push([nss, ...movementFields].join(",") );
+    const movementFields = line.split(",").slice(1, 13);
+    this.movements.push([nss, ...movementFields].join(","));
   }
 
   printRecords() {
