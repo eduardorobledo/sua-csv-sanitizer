@@ -1,6 +1,6 @@
 {
   "name": "sua-csv-sanitizer",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Small sanitizer for payroll reports exported to csv format from SUA (Sistema Único de Autodeterminación) a monolith system for social security management used in México",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
